@@ -24,6 +24,10 @@ chat2.grid(column=0, columnspan = 3, row = 2, rowspan = 2)
 for i, k in enumerate(coin):
     Button(text = k, width = 5, command = lambda c = k: choice(c)).grid(column = i, row = 5)
 
+Button(canvas, text = 'Quit', width = 5, command = lambda: Quit()).grid(column=1, row = 6)
+
+def Quit():
+    sys.exit()
 
 def choice(c):
     global pScore, cScore
@@ -38,7 +42,7 @@ def choice(c):
         chat2.config(text = f'I guessed {cg}.\nThat\'s 1 point for me!')
         cScore += 1
     if cg != flip:
-        chat2.config(text = f'Aw, biscuits!\n I\'ll get it next time!')
+        chat2.config(text = f'I guessed {cg}.\nAw, biscuits! I\'ll get it next time!')
     if c == "lost":
         if flip == "lost":
             chat.config(text= 'Oh, no! I lost the coin!')
