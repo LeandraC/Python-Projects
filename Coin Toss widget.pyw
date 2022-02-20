@@ -24,10 +24,10 @@ chat2.grid(column=0, columnspan = 3, row = 2, rowspan = 2)
 for i, k in enumerate(coin):
     Button(text = k, width = 5, command = lambda c = k: choice(c)).grid(column = i, row = 5)
 
-Button(canvas, text = 'Quit', width = 5, command = lambda: Quit()).grid(column=1, row = 6)
+Button(canvas, text = 'Quit', width = 5, command = lambda: quit()).grid(column=1, row = 6)
 
 def Quit():
-    sys.exit()
+    quit()
 
 def choice(c):
     global pScore, cScore
