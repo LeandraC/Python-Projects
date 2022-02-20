@@ -6,7 +6,7 @@ cs = 0
 breathe = time.sleep(.5)
 
 def Quit():
-    sys.exit()
+    quit()
 
 def Play(c):
     global ps, cs
@@ -16,16 +16,16 @@ def Play(c):
         print(f'You guessed {c} and the coin landed on {flip}!')
         breathe
         print('That\'s 1 point for you!')
-        ps += 1    
+        ps += 1
     elif c != flip:
         print(f'You guessed {c} and the coin landed on {flip}!')
         breathe
-        print('Better luck next time.')    
+        print('Better luck next time.')
     if cg == flip:
         print(f'I guessed {cg} and the coin landed on {flip}!')
         breathe
         print('That\'s 1 point for me!')
-        cs += 1    
+        cs += 1
     elif cg != flip:
         print(f'I guessed {cg} and the coin landed on {flip}!')
         breathe
@@ -47,4 +47,4 @@ while True:
         c = 'tails'
         Play(c)
     elif c.lower() in bye:
-        Quit()
+        quit()
