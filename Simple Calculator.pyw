@@ -27,12 +27,14 @@ for i, k in enumerate(funs):
 
 Button(canvas, font = p, text = 'Clear', width = 5, padx=2, command = lambda:clear()).grid(column=4, row =5)
 Button(canvas, font = p, text = '=', width = 5, padx=2, command = lambda: give()).grid(column=3, row =5)
-Button(canvas, font = p, text = 'Exit', width = 5, padx=2, command = lambda: sys.exit()).grid(column=1, row =5)
+Button(canvas, font = p, text = 'Exit', width = 5, padx=2, command = lambda: quit()).grid(column=1, row =5)
 
 boop=Label(canvas, font=p, width=5, anchor= 'e', bg="red")
 boop.grid(columnspan = 5, ipadx=90,row = 0)
 logged = StringVar()
 bebop = boop.config(textvariable = logged)
+
+
 
 
 def click(c):
