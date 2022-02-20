@@ -22,7 +22,7 @@ while True:
         v = input(print('Please enter a valid response. Unless you meant quit.\
         \nWould you like to quit? Press Y to quit or enter a valid number to continue.'))
         if v.lower() == 'q' or 'y':
-            sys.exit()
+            quit()
         else:
             v = int(v)
             shoot(v)
