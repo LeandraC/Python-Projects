@@ -16,9 +16,9 @@ pS.grid(column = 0, row = 6)
 cS = Label(canvas, text = cScore, width = 5)
 cS.grid(column = 2, row = 6)
 
-chat= Label(canvas)
+chat= Label(canvas, width = 30)
 chat.grid(column=0, columnspan = 3, row = 0, rowspan = 2)
-chat2= Label(canvas)
+chat2= Label(canvas, width = 30)
 chat2.grid(column=0, columnspan = 3, row = 2, rowspan = 2)
 
 for i, k in enumerate(coin):
@@ -45,8 +45,8 @@ def choice(c):
         chat2.config(text = f'I guessed {cg}.\nAw, biscuits! I\'ll get it next time!')
     if c == "lost":
         if flip == "lost":
-            chat.config(text= 'Oh, no! I lost the coin!')
-            chat2.config(text = "Why'd you throw it away?!")
+            chat.config(text= '\nOh, no! I lost the coin!')
+            chat2.config(text = "Why'd you throw it away?!\n")
         elif flip != "lost":
             chat.config(text = f'Ha! You missed!\nThe coin landed on {flip}!')
             chat2.config(text = 'I get 1 point because\nyou tried to cheat!')
