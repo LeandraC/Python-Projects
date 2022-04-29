@@ -16,8 +16,8 @@ i = 0
 c = ''
 for a in range(3):
     i+=1
-    Button(canvas, font = p, text=(f'{i}'), width = 5, padx=2, justify="center", command=lambda c = i: click(c)).grid(column=(a+1), row =(3), sticky="news")
-    Button(canvas, font = p, text=(f'{i+3}'), width = 5, padx=2, justify="center", command=lambda c = i: click(c)).grid(column=(a+1), row =(2), sticky="news")
+    Button(canvas, font = p, text=(f'{i}'), width = 5, padx=2, justify="center", command=lambda c = i + 6: click(c)).grid(column=(a+1), row =(3), sticky="news")
+    Button(canvas, font = p, text=(f'{i+3}'), width = 5, padx=2, justify="center", command=lambda c = i + 3: click(c)).grid(column=(a+1), row =(2), sticky="news")
     Button(canvas, font = p, text=(f'{i+6}'), width = 5, padx=2, justify="center", command=lambda c = i: click(c)).grid(column=(a+1), row =(1), sticky="news")
 
 
