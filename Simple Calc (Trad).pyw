@@ -44,11 +44,10 @@ manual_entry.set('0')
 
 
 def strokes(event):
-    c = entre.get() + str(event)
+    global trip
+    trip = f'{entre.get()}'
     entre.delete(0,END)
     entre.icursor(END)
-    click(c)
-    c=' '
     give()
 
 
@@ -77,8 +76,6 @@ def clear():
     c=''
     manual_entry.set(trip)
     entre.delete(END)
-
-
 
 
 canvas.bind('<Return>', strokes)
